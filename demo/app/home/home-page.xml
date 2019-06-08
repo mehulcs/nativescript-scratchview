@@ -7,9 +7,9 @@
     </ActionBar>
 
     <GridLayout>
-        <sc:ScratchView height="200" width="200">
+        <sc:ScratchView height="200" width="200" strokeWidth="10">
             <Image height="200" width="200" stretch="aspectFill" src="~/images/back.jpg"></Image>
-            <Image height="200" width="200" stretch="aspectFill" src="~/images/scratch.jpg"></Image>
+            <Image height="200" width="200" stretch="aspectFill" src="~/images/scratch.png"></Image>
         </sc:ScratchView>
     </GridLayout>
 </Page>

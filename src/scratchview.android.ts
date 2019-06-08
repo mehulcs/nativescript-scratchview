@@ -1,4 +1,4 @@
-import { Common } from "./scratchview.common";
+import { Common, strokeWidthProperty } from "./scratchview.common";
 declare var com: any;
 
 export class ScratchView extends Common {
@@ -11,5 +11,9 @@ export class ScratchView extends Common {
       this._context
     );
     return scratchcard;
+  }
+
+  [strokeWidthProperty.setNative](value: string) {
+    this.nativeView.setStrokeWidth(parseInt(value));
   }
 }
