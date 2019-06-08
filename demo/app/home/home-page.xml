@@ -1,12 +1,15 @@
-<Page class="page"
-    navigatingTo="onNavigatingTo" 
+<Page class="page" navigatingTo="onNavigatingTo" 
+    xmlns:sc="nativescript-scratchview" 
     xmlns="http://schemas.nativescript.org/tns.xsd">
-    
+
     <ActionBar class="action-bar">
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 
     <GridLayout>
-        <!-- Add your page content here -->
+        <sc:ScratchView height="200" width="200">
+            <Image height="200" width="200" stretch="aspectFill" src="~/images/back.jpg"></Image>
+            <Image height="200" width="200" stretch="aspectFill" src="~/images/scratch.jpg"></Image>
+        </sc:ScratchView>
     </GridLayout>
 </Page>
