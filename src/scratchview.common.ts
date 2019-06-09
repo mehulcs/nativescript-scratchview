@@ -7,6 +7,8 @@ export const strokeWidthProperty = new Property<Common, string>({
 });
 
 export abstract class Common extends LayoutBase {
+  public static revealedEvent = "revealed";
+  public static percentRevealedEvent = "percentRevealed";
   protected strokeWidth: Number;
 
   [strokeWidthProperty.setNative](value: Number) {

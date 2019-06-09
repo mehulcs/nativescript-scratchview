@@ -1,0 +1,10 @@
+.scratchContainer {
+  border-width: 4;
+  border-color: #30bcff;
+  margin-top: 20;
+}
+
+.percent {
+  font-size: 30;
+  color: #30bcff;
+}

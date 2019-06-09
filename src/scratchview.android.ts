@@ -10,6 +10,25 @@ export class ScratchView extends Common {
     const scratchcard = new com.example.scratchcardlib.views.CustomScratchView(
       this._context
     );
+
+    scratchcard.setRevealListener(
+      new com.example.scratchcardlib.views.CustomScratchView.IRevealListener({
+        onRevealed: () => {
+          this.notify({
+            eventName: Common.revealedEvent,
+            object: this
+          });
+        },
+        onRevealPercentChangedListener: percent => {
+          this.notify({
+            eventName: Common.percentRevealedEvent,
+            object: this,
+            percent: Math.floor(percent)
+          });
+        }
+      })
+    );
+
     return scratchcard;
   }
 

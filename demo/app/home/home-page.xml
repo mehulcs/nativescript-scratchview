@@ -6,11 +6,17 @@
         <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 
-    <StackLayout>
-        <sc:ScratchView height="200" width="200" strokeWidth="10" id="scratchView">
-            <Image height="200" width="200" stretch="aspectFill" src="~/images/back.jpg"></Image>
-            <Image height="200" width="200" stretch="aspectFill" src="~/images/scratch.png"></Image>
-        </sc:ScratchView>
-        <Button text="Reveal" tap="reveal" />
-    </StackLayout>
+    <GridLayout rows="auto,*,auto" columns="*">
+        <StackLayout row="0" class="scratchContainer" horizontalAlignment="center">
+            <sc:ScratchView height="250" width="250" strokeWidth="10" id="scratchView" revealed="{{revealed}}" percentRevealed="{{percentRevealed}}">
+                <Image height="250" width="250" stretch="aspectFill" src="~/images/back.jpg"></Image>
+                <Image height="250" width="250" stretch="aspectFill" src="~/images/scratch.jpg"></Image>
+            </sc:ScratchView>
+        </StackLayout>
+        <StackLayout row="1" verticalAlignment="center" style="margin-left:20;">
+            <Label text="Percent revealed : " textWrap="true" />
+            <Label text="{{percent}}" class="percent"></Label>
+        </StackLayout>
+        <Button row="2" text="Reveal" tap="reveal" class="btn btn-primary" />
+    </GridLayout>
 </Page>
