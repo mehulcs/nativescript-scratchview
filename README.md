@@ -1,39 +1,46 @@
-# Your Plugin Name
+# Nativescript Scratch View
+Nativescript plugin to implement scratch card functionality. 
 
-Add your plugin badges here. See [nativescript-urlhandler](https://github.com/hypery2k/nativescript-urlhandler) for example.
-
-Then describe what's the purpose of your plugin. 
-
-In case you develop UI plugin, this is where you can add some screenshots.
-
-## (Optional) Prerequisites / Requirements
-
-Describe the prerequisites that the user need to have installed before using your plugin. See [nativescript-firebase plugin](https://github.com/eddyverbruggen/nativescript-plugin-firebase) for example.
 
 ## Installation
 
-Describe your plugin installation steps. Ideally it would be something like:
+Run the following command from the root of your project:
 
 ```javascript
-tns plugin add <your-plugin-name>
+tns plugin add nativescript-scratchview
 ```
 
 ## Usage 
 
-Describe any usage specifics for your plugin. Give examples for Android, iOS, Angular if needed. See [nativescript-drop-down](https://www.npmjs.com/package/nativescript-drop-down) for example.
-	
-	```javascript
-    Usage code snippets here
-    ```)
+You need to add `xmlns:sv="nativescript-scratchview"` to your page tag, and then simply use `<sv:ScratchView>` in order to add the widget to your page.
+```xml
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" xmlns:sv="nativescript-scratchview">
+  <GridLayout rows="*" columns="*">
+	<sv:ScratchView  id="scratchView" height="250"  width="250"  strokeWidth="10" revealed="{{revealed}}"  percentRevealed="{{percentRevealed}}">
+	  <Image  height="250"  width="250"  stretch="aspectFill"  src="~/images/back.jpg"></Image>
+	  <Image  height="250"  width="250"  stretch="aspectFill"  src="~/images/scratch.jpg"></Image>
+	</sv:ScratchView>
+  </GridLayout>
+</Page>
+```
 
-## API
-
-Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
-    
+## API    
 | Property | Default | Description |
 | --- | --- | --- |
-| some property | property default value | property description, default values, etc.. |
-| another property | property default value | property description, default values, etc.. |
+| strokeWidth | 10 | Scratching stroke width |
+
+### Events
+* **revealed**  
+Triggered when the scratch view is 100% scratched.
+
+* **percentRevealed**  
+Triggered every time scratch view is scratched.
+	**Parameters**
+	event.percent - percentage of scratch view scratched
+
+### Methods
+* **reveal**  
+Clear scratch and reveal behind view.
     
 ## License
 
