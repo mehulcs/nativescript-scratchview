@@ -6,12 +6,14 @@ export const strokeWidthProperty = new Property<Common, string>({
   defaultValue: "1"
 });
 
-export class Common extends LayoutBase {
+export abstract class Common extends LayoutBase {
   protected strokeWidth: Number;
 
   [strokeWidthProperty.setNative](value: Number) {
     this.strokeWidth = value;
   }
+
+  public abstract reveal(): void;
 }
 
 strokeWidthProperty.register(Common);

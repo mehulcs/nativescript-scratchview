@@ -16,4 +16,8 @@ export class ScratchView extends Common {
   [strokeWidthProperty.setNative](value: string) {
     this.nativeView.setStrokeWidth(parseInt(value));
   }
+
+  public reveal(): void {
+    this.nativeView.reveal();
+  }
 }
