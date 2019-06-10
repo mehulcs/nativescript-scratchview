@@ -33,11 +33,13 @@
 		"NativeScript",
 		"JavaScript",
 		"Android",
-		"iOS"
+		"iOS",
+		"ScratchCard",
+		"ScratchView"
 	],
 	"author": {
-		"name": "Your Name",
-		"email": "youremail@yourdomain.com"
+		"name": "Mehul Prajapati",
+		"email": "mehul.becs@gmail.com"
 	},
 	"bugs": {
 		"url": "https://github.com/mehulcs/nativescript-scratchview/issues"

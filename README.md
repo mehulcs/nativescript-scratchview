@@ -1,4 +1,4 @@
-# Nativescript Scratch View
+# Nativescript Scratch View (Android only)
 Nativescript plugin to implement scratch card functionality.
  
 ![Screenshot of Android](https://raw.githubusercontent.com/mehulcs/nativescript-scratchview/master/images/ns-sv-demo.gif)
